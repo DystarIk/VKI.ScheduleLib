@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="VKI.ScheduleLib.Data.AppDbContext">
+    <Position X="15.25" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAQAAAAAEAAAAAAAAAEAAAAAAAAAAADAAAAA=</HashCode>
+      <FileName>Data\AppDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VKI.ScheduleLib.Data.ExcelReader">
+    <Position X="15.25" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAABAAIAAAAAAAAAAAAAAAAEAAAAAAAAQAAAA=</HashCode>
+      <FileName>Data\ExcelReader.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_appDb" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VKI.ScheduleLib.Models.College">
+    <Position X="9.75" Y="1" Width="2" />
+    <AssociationLine Name="Courses" Type="VKI.ScheduleLib.Models.Course" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="1.764" />
+        <Point X="6.102" Y="1.764" />
+        <Point X="6.102" Y="3.343" />
+        <Point X="6.5" Y="3.343" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Groups" Type="VKI.ScheduleLib.Models.Group" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="1.764" />
+        <Point X="6.092" Y="1.764" />
+        <Point X="6.092" Y="6.093" />
+        <Point X="6.5" Y="6.093" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Subjects" Type="VKI.ScheduleLib.Models.Subject" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.75" Y="1.764" />
+        <Point X="13.667" Y="1.764" />
+        <Point X="13.667" Y="5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAAAAAAQAAEAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\College.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Courses" />
+      <Property Name="Groups" />
+      <Property Name="Schedules" />
+      <Property Name="Subjects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VKI.ScheduleLib.Models.Course">
+    <Position X="6.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Course.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Groups" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VKI.ScheduleLib.Models.Group">
+    <Position X="6.5" Y="5.75" Width="2" />
+    <AssociationLine Name="Schedule" Type="VKI.ScheduleLib.Models.Schedule" FixedFromPoint="true">
+      <Path>
+        <Point X="8.5" Y="5.956" />
+        <Point X="9.5" Y="5.956" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAEAAAAAAQAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Group.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Schedule" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VKI.ScheduleLib.Models.Schedule">
+    <Position X="9.5" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Schedule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Subjects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VKI.ScheduleLib.Models.Subject">
+    <Position X="12.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAEEIAAIAQABEAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Models\Subject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Schedules" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VKI.ScheduleLib.Services.Searcher">
+    <Position X="1" Y="1" Width="4.5" />
+    <AssociationLine Name="College" Type="VKI.ScheduleLib.Models.College" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="5.5" Y="1.312" />
+        <Point X="9.75" Y="1.346" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAQABAAAAAAAAAAAAAAAIAAAAACAAAAAAAA=</HashCode>
+      <FileName>Services\Searcher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="College" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
